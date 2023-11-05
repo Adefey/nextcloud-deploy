@@ -11,7 +11,7 @@ services:
 
 
   app:
-    image: nextcloud:fpm
+    image: nextcloud
     restart: always
     links:
       - db
