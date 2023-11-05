@@ -6,7 +6,7 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
     volumes:
-      - db:/var/lib/mysql
+      - ./db:/var/lib/mysql:z
     env_file: config.txt
 
 
@@ -16,7 +16,7 @@ services:
     links:
       - db
     volumes:
-      - nextcloud:/var/www/html
+      - ./nextcloud:/var/www/html:z
     env_file: config.txt
     ports:
       - 19980:80
