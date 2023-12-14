@@ -29,4 +29,8 @@ services:
       - nextcloud:/var/www/html:z
     entrypoint: /cron.sh
 
+
+volumes:
+  nextcloud:
+
 # Assuming NGINX instance is already running, proxy to 19980
